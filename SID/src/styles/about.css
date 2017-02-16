@@ -1,0 +1,9 @@
+
+.label-title{
+	-fx-font-size: 16pt;
+	-fx-text-fill: #1F98E0;
+}
+
+.label-content{
+	-fx-font-size: 12pt;
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="410.0" stylesheets="@../styles/form.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TeacherFormController">
+   <left>
+      <GridPane hgap="20.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="177.0" minWidth="40.0" prefWidth="97.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="705.0" minWidth="10.0" prefWidth="238.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="BASELINE_LEFT" text="Documento:" />
+            <Label text="Nombre:" GridPane.rowIndex="1" />
+            <Label text="Apellido:" GridPane.rowIndex="2" />
+            <Label text="Salario:" GridPane.rowIndex="3" />
+            <Label text="Titulo:" GridPane.rowIndex="4" />
+            <Label text="Fecha inicio:" GridPane.rowIndex="5" />
+            <Label text="Fecha fin:" GridPane.rowIndex="6" />
+            <Label text="Área:" GridPane.rowIndex="7" />
+            <TextField fx:id="documentTF" GridPane.columnIndex="1" />
+            <TextField fx:id="nameTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="lastNameTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="salaryTF" />
+                  <Label fx:id="salaryFormatLb" text="label" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <TextField fx:id="titleTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <DatePicker fx:id="startDateDP" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="endDateDP" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ChoiceBox fx:id="areaCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            
+         </children>
+         <BorderPane.margin>
+            <Insets left="40.0" right="40.0" top="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </left>
+   <bottom>
+      <BorderPane BorderPane.alignment="CENTER">
+         <top>
+            <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <HBox alignment="CENTER_RIGHT" spacing="15.0" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" text="Aceptar" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancelar" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" right="40.0" top="15.0" />
+               </padding>
+            </HBox>
+         </center>
+      </BorderPane>
+   </bottom>
+   <top>
+      <HBox prefHeight="45.0" stylesheets="@../styles/top.css" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

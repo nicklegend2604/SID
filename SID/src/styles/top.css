@@ -1,0 +1,18 @@
+.root *{
+	-fx-background-color: #1E64AE;
+	-fx-font-size: 20pt;
+}
+
+.root *{
+	-fx-background-color: #1E64AE;
+	-fx-font-size: 20pt;
+}
+
+.root {
+	-fx-border-color: black
+}
+
+.label{
+	-fx-text-fill: aliceblue;
+}
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="208.0" prefWidth="448.0" stylesheets="@../styles/form.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AreaFormController">
+   <left>
+      <GridPane hgap="20.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="177.0" minWidth="40.0" prefWidth="97.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="705.0" minWidth="10.0" prefWidth="238.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="BASELINE_LEFT" text="Nombre:" />
+            <TextField fx:id="nameTF" GridPane.columnIndex="1" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="40.0" right="40.0" top="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </left>
+   <bottom>
+      <BorderPane BorderPane.alignment="CENTER">
+         <top>
+            <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <HBox alignment="CENTER_RIGHT" spacing="15.0" BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" text="Aceptar" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancelar" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" right="40.0" top="15.0" />
+               </padding>
+            </HBox>
+         </center>
+      </BorderPane>
+   </bottom>
+   <top>
+      <HBox prefHeight="45.0" stylesheets="@../styles/top.css" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

@@ -1,0 +1,8 @@
+.root *{
+	-fx-font-size: 12pt;
+}
+
+.table-column {
+  -fx-alignment: CENTER;
+}
+
